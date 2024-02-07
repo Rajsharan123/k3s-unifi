@@ -9,11 +9,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  namespace: argocd
+  namespace: argo
   name: unifi-controller
   # cascade deletes
   finalizers:
-    - resources-finalizer.argocd.argoproj.io
+    - resources-finalizer.argo.argoproj.io
   annotations:
     argocd.argoproj.io/sync-wave: "12"  # Lower the number the sooner to deploy
 spec:
