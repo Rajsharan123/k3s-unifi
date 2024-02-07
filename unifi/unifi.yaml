@@ -10,12 +10,12 @@ spec:
       - CreateNamespace=true
   sources:
   - chart: unifi
-    repoURL: https://k8s-at-home.com/charts/
+    repoURL: https://github.com/Rajsharan123/k3s-unifi/templates/
     targetRevision: 4.10.1
     helm:
       valueFiles:
       - $values/configs/internal/unifi/values.yaml
-  - repoURL: https://github.com/noahburrell0/k8s.git
+  - repoURL: https://github.com/Rajsharan123/k3s-unifi.git
     targetRevision: main
     ref: values
   destination:
