@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: unifi
-  namespace: argocd
+  namespace: unifi1
 spec:
   project: internal
   syncPolicy:
@@ -11,7 +11,7 @@ spec:
   sources:
   - chart: unifi
     repoURL: https://github.com/Rajsharan123/k3s-unifi/templates/
-    targetRevision: 4.10.1
+    #targetRevision: 4.10.1
     helm:
       valueFiles:
       - $values/configs/internal/unifi/values.yaml
@@ -20,4 +20,4 @@ spec:
     ref: values
   destination:
     name: in-cluster
-    namespace: unifi
+    namespace: unifi1
